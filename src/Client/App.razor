@@ -1,6 +1,9 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using System.Reflection
+<Router
+    AppAssembly="@typeof(App).Assembly"
+    AdditionalAssemblies="@_additionalAssemblies">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
     </Found>
     <NotFound>
         <PageTitle>Not found</PageTitle>
@@ -9,3 +12,14 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+
+    private readonly Assembly[] _additionalAssemblies =
+    {
+        typeof(ClientLib.Admin.Component1).Assembly,
+        typeof(ClientLib.Information.Component1).Assembly,
+        typeof(ClientLib.Massacre.Component1).Assembly
+    };
+
+}

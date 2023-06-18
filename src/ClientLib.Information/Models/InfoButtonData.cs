@@ -1,6 +1,6 @@
-namespace UnitedSystemsCooperative.Web.Client.Modules.Information;
+namespace UnitedSystemsCooperative.Web.ClientLib.Information.Models;
 
-public class InfoButton
+public class InfoButtonData
 {
     public string Title { get; set; } = "";
     public string Caption { get; set; } = "";

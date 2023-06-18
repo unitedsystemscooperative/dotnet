@@ -4,6 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>UnitedSystemsCooperative.Web.ClientLib.Information</RootNamespace>
     </PropertyGroup>
 
 
@@ -17,6 +18,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Shared\Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Pages\" />
     </ItemGroup>
 
 </Project>
