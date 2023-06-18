@@ -17,6 +17,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\ClientLib.Admin\ClientLib.Admin.csproj" />
+		<ProjectReference Include="..\ClientLib.Information\ClientLib.Information.csproj" />
+		<ProjectReference Include="..\ClientLib.Massacre\ClientLib.Massacre.csproj" />
 		<ProjectReference Include="..\Shared\Shared.csproj" />
 	</ItemGroup>
 
