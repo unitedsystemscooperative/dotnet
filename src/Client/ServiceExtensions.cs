@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using UnitedSystemsCooperative.Web.Client.Interfaces;
 using UnitedSystemsCooperative.Web.Client.Services;
 using UnitedSystemsCooperative.Web.Shared;
@@ -6,6 +7,7 @@ using UnitedSystemsCooperative.Web.Client.Services.ItemServices;
 
 namespace UnitedSystemsCooperative.Web.Client;
 
+[ExcludeFromCodeCoverage]
 public static class ServiceExtensions
 {
     public static void AddConfigs(this IServiceCollection services, IConfiguration configuration)

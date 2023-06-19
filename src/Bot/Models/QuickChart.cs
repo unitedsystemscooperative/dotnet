@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace UnitedSystemsCooperative.Bot.Models;
 
+[ExcludeFromCodeCoverage]
 public class QuickChart
 {
     public QuickChart(IEnumerable<string> labels, IEnumerable<int> counts)
@@ -23,6 +25,7 @@ public class QuickChart
     }
 }
 
+[ExcludeFromCodeCoverage]
 public class QuickChartData
 {
     public QuickChartData(IEnumerable<string> labels, IEnumerable<int> counts)

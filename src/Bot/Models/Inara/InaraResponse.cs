@@ -1,9 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
 #pragma warning disable CS8618
 
 namespace UnitedSystemsCooperative.Bot.Models;
 
+[ExcludeFromCodeCoverage]
 public class InaraResponse
 {
     [JsonPropertyName("header")]
@@ -12,12 +14,14 @@ public class InaraResponse
     public IEnumerable<InaraResponseEvent> Events { get; set; }
 }
 
+[ExcludeFromCodeCoverage]
 public class InaraResponseHeader
 {
     [JsonPropertyName("eventStatus")]
     public int EventStatus { get; set; }
 }
 
+[ExcludeFromCodeCoverage]
 public class InaraResponseEvent
 {
     [JsonPropertyName("eventStatus")]

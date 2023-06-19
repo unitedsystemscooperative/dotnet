@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
@@ -5,6 +6,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace UnitedSystemsCooperative.Bot.Models;
 
+[ExcludeFromCodeCoverage]
 public class JoinRequest
 {
     public ObjectId _id { get; set; }

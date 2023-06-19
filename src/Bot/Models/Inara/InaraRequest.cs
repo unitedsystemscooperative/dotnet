@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -8,6 +9,7 @@ namespace UnitedSystemsCooperative.Bot.Models;
 
 
 [Serializable]
+[ExcludeFromCodeCoverage]
 public class InaraRequest
 {
     [JsonPropertyName("header")]

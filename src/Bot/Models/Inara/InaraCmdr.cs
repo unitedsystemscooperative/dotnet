@@ -1,7 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Bot.Models;
 
 // Disable nullable warning.
 #pragma warning disable CS8618
+[ExcludeFromCodeCoverage]
 public class InaraCmdr
 {
     public long UserId { get; set; }

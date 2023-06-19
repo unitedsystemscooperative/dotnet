@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Configuration;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using UnitedSystemsCooperative.Bot.Interfaces;
 using UnitedSystemsCooperative.Bot.Models;
@@ -12,7 +11,7 @@ public class MongoDbService : IDatabaseService
 
     public MongoDbService(IConfiguration config)
     {
-        _connString = config.GetConnectionString("mongoDb");
+        _connString = config.GetConnectionString("mongoDb") ?? "";
     }
 
     public async Task<T> GetValueAsync<T>(string key)
@@ -30,9 +29,7 @@ public class MongoDbService : IDatabaseService
         var client = GetClient();
         var database = client.GetDatabase("usc");
         var collection = database.GetCollection<DatabaseItem<T>>("discordKeys");
-
-        var newDoc = new DatabaseItem<T>() {Key = key, Value = value};
-
+        
         await collection.FindOneAndUpdateAsync(
             Builders<DatabaseItem<T>>.Filter.Eq("key", key),
             Builders<DatabaseItem<T>>.Update.Set("value", value),

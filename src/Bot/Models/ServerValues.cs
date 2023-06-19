@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Bot.Models;
 
+[ExcludeFromCodeCoverage]
 public class ServerValues
 {
     public const string ConfigName = "ServerValues";

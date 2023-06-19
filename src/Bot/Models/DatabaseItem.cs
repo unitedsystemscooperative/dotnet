@@ -1,9 +1,11 @@
+using System.Diagnostics.CodeAnalysis;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 #pragma warning disable CS8618
 namespace UnitedSystemsCooperative.Bot.Models;
 
+[ExcludeFromCodeCoverage]
 public class DatabaseItem<T>
 {
     public ObjectId _id { get; set; }

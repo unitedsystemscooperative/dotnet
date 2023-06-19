@@ -1,8 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using MudBlazor;
 using MudBlazor.Utilities;
 
 namespace UnitedSystemsCooperative.Web.Client;
 
+[ExcludeFromCodeCoverage]
 public static class UscTheme
 {
     public static MudTheme Theme { get; } = new()

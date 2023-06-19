@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Discord;
 using Discord.Interactions;
 using Discord.WebSocket;
@@ -12,6 +13,7 @@ using UnitedSystemsCooperative.Bot.Services;
 
 namespace UnitedSystemsCooperative.Bot;
 
+[ExcludeFromCodeCoverage]
 public static class ServiceExtensions
 {
     public static void AddServices(this IServiceCollection services, IConfiguration configuration)

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using Discord;
 using Discord.Interactions;
@@ -5,6 +6,7 @@ using Discord.WebSocket;
 
 namespace UnitedSystemsCooperative.Bot;
 
+[ExcludeFromCodeCoverage]
 public class CommandHandler
 {
     private readonly DiscordSocketClient _client;
