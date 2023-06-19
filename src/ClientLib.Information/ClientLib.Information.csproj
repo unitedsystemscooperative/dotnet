@@ -14,14 +14,22 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.7" />
+        <PackageReference Include="MudBlazor" Version="6.4.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ClientLib.Shared\ClientLib.Shared.csproj" />
       <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Pages\" />
+      <Folder Include="wwwroot\img\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Pages\Odyssey\OdyDeath.razor" />
+      <AdditionalFiles Include="Pages\Odyssey\OdyEngineering.razor" />
+      <AdditionalFiles Include="Pages\Odyssey\OdyS2GCombat.razor" />
     </ItemGroup>
 
 </Project>

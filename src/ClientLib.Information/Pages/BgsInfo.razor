@@ -1,0 +1,94 @@
+@page "/information/bgs"
+@using UnitedSystemsCooperative.Web.ClientLib.Information.Models
+<HeadContent>
+    <title>BGS General Info</title>
+    <meta name="description" content="Background Information (BGS) General Information"/>
+</HeadContent>
+
+<MudContainer MaxWidth="MaxWidth.Large">
+    <MudText Typo="Typo.h4" Align="Align.Center">
+        Background Simulation (BGS) General Information
+    </MudText>
+    <UscPaper Class="pa-2">
+        <section class="mb-2">
+            <MudText Typo="Typo.h5">Influence</MudText>
+            <IndentedDiv>
+                <MudText Typo="Typo.h6">Adding Influence</MudText>
+                <IndentedDiv>
+                    <MudText>There are multiple ways to add influence:</MudText>
+                    <MudList>
+                        <MudListItem>Complete INF missions. The more +'s the better.</MudListItem>
+                        <MudListItem>Bounty Hunting - Dropping the bounties at a station where the giver of the bounty has a presence.</MudListItem>
+                        <MudListItem>Exploration Data hand-in - Increases INF for the owner of the station.</MudListItem>
+                        <MudListItem>Commodity Trading - Increases INF for the owner of the station.</MudListItem>
+                        <MudListItem>Interstellar Factors - Increases INF for the owner of the station.</MudListItem>
+                        <MudListItem>Vista Genomics hand-in (Odyssey-Only and Unconfirmed) - Increases INF for the owner of the station.</MudListItem>
+                    </MudList>
+                </IndentedDiv>
+
+                <MudText Typo="Typo.h6">Decreasing Influence</MudText>
+                <IndentedDiv>
+                    <MudList>
+                        <MudListItem>Completing INF missions for other factions in the system.</MudListItem>
+                        <MudListItem>"Clean Killing" - Killing innocent NPCs of that faction. This is considered illegal and can bring System Authority against you.</MudListItem>
+                        <MudListItem>Black Market Trading - Bringing illegal/illicit goods and selling them to a station will decreases the station owner's INF.</MudListItem>
+                        <MudListItem>
+                            Failing Missions - Failing missions, whether intentional or not, will decrease the faction's INF.
+                            <br/>
+                            Note: Aborting the mission will only decrease your REP without affecting INF.
+                        </MudListItem>
+                    </MudList>
+                </IndentedDiv>
+
+                <MudText Typo="Typo.h6">Diminishing Returns</MudText>
+                <IndentedDiv>
+                    <MudText>Too much of one thing is too much. There are caps in place to prevent over-inflating changes in influence.</MudText>
+                </IndentedDiv>
+            </IndentedDiv>
+        </section>
+        <MudDivider/>
+        <section class="mt-2">
+            <MudText Typo="Typo.h5">Conflicts</MudText>
+            <IndentedDiv>
+                <MudText Typo="Typo.h6">Elections</MudText>
+                <IndentedDiv>
+                    <MudText>Complete election missions to win the conflict.</MudText>
+                </IndentedDiv>
+
+                <MudText Typo="Typo.h6">Wars</MudText>
+                <IndentedDiv>
+                    <MudText>Wars are one in two ways:</MudText>
+                    <MudList>
+                        <MudListItem>Conflict Zones</MudListItem>
+                        <MudListItem>Combat Bonds</MudListItem>
+                    </MudList>
+                    <MudText>Diminishing returns are a possibility here. Follow the list below. A maximum of 9 should be a good cap.</MudText>
+                    <MudContainer MaxWidth="MaxWidth.ExtraSmall">
+                        <MudTable Items="_conflictZoneData">
+                            <HeaderContent>
+                                <MudTh>Conflict Zone Level</MudTh>
+                                <MudTh>Number Completed</MudTh>
+                            </HeaderContent>
+                            <RowTemplate>
+                                <MudTd DataLabel="Conflict Zone Level">@context.ConflictZoneLevel</MudTd>
+                                <MudTd DataLabel="Number Completed">@context.NumberCompleted</MudTd>
+                            </RowTemplate>
+                        </MudTable>
+                    </MudContainer>
+                </IndentedDiv>
+            </IndentedDiv>
+        </section>
+    </UscPaper>
+</MudContainer>
+
+
+@code {
+
+    private ConflictZoneData[] _conflictZoneData =
+    {
+        new() {ConflictZoneLevel = "Low", NumberCompleted = 1},
+        new() {ConflictZoneLevel = "Medium", NumberCompleted = 2},
+        new() {ConflictZoneLevel = "High", NumberCompleted = 3}
+    };
+
+}
