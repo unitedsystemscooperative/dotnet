@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Web.ClientLib.Information.Models;
 
+[ExcludeFromCodeCoverage]
 public class ShipReviewData
 {
     public string ShipId { get; set; } = "";

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using UnitedSystemsCooperative.Web.Client;
@@ -13,3 +14,7 @@ builder.Services.AddServices(builder.Configuration);
 builder.Services.AddMudServices();
 
 await builder.Build().RunAsync();
+
+[ExcludeFromCodeCoverage]
+// ReSharper disable once UnusedType.Global
+public partial class Program { }

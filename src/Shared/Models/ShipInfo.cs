@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Web.Shared.Models;
 
+[ExcludeFromCodeCoverage]
 public class ShipInfo
 {
     public int Id { get; set; }

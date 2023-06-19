@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Web.Shared;
 
+[ExcludeFromCodeCoverage]
 public class Infographic
 {
     public string Id { get; set; }

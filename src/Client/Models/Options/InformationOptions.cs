@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Web.Client.Models.Options;
 
+[ExcludeFromCodeCoverage]
 public class InformationOptions
 {
     public const string SettingsName = "app-data:information";
@@ -7,6 +10,7 @@ public class InformationOptions
     public Infographic[] Infographics = Array.Empty<Infographic>();
 }
 
+[ExcludeFromCodeCoverage]
 public class Infographic
 {
     public string Id { get; set; } = string.Empty;

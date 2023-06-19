@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Web.ClientLib.Information.Models;
 
+[ExcludeFromCodeCoverage]
 public class InfographicData
 {
     public string Id { get; set; } = "";

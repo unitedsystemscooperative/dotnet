@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UnitedSystemsCooperative.Web.Shared.JoinRequests;
 
+[ExcludeFromCodeCoverage]
 public class AmbassadorJoinRequest : JoinRequestBase
 {
     [Required]

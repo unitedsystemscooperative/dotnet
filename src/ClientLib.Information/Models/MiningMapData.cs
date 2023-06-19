@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace UnitedSystemsCooperative.Web.ClientLib.Information.Models;
 
+[ExcludeFromCodeCoverage]
 public class MiningMapData
 {
     public string System { get; set; } = "";

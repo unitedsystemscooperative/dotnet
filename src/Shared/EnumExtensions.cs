@@ -1,7 +1,9 @@
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UnitedSystemsCooperative.Web.Shared;
 
+[ExcludeFromCodeCoverage]
 public static class EnumExtensions
 {
     public static string ToDescriptionString<T>(this T val) where T : Enum

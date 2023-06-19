@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using UnitedSystemsCooperative.Web.Shared.FormValidators;
 
 namespace UnitedSystemsCooperative.Web.Shared.JoinRequests;
 
+[ExcludeFromCodeCoverage]
 public abstract class JoinRequestBase
 {
     public string? Id { get; set; }

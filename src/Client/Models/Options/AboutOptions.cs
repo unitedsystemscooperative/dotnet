@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using UnitedSystemsCooperative.Web.Client.Modules.About;
 
 namespace UnitedSystemsCooperative.Web.Client.Models.Options;
 
+[ExcludeFromCodeCoverage]
 public class AboutOptions
 {
     public const string SettingsName = "app-data:about";
@@ -10,6 +12,7 @@ public class AboutOptions
     public AboutLayoutButtonInfo[]? LayoutButtonInfos { get; set; } = Array.Empty<AboutLayoutButtonInfo>();
 }
 
+[ExcludeFromCodeCoverage]
 // ReSharper disable once ClassNeverInstantiated.Global
 public class UscRules
 {

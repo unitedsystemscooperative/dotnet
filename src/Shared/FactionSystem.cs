@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace UnitedSystemsCooperative.Web.Shared;
 
+[ExcludeFromCodeCoverage]
 public class FactionSystem : DbItem
 {
     [Required] public string Name { get; set; }

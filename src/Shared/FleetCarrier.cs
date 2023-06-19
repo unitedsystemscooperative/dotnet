@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using UnitedSystemsCooperative.Web.Shared.FormValidators;
 
 namespace UnitedSystemsCooperative.Web.Shared;
 
+[ExcludeFromCodeCoverage]
 public class FleetCarrier : DbItem
 {
     [Required] [FleetCarrierValidator] public override string Id { get; set; }

@@ -1,5 +1,8 @@
-﻿namespace UnitedSystemsCooperative.Web.Shared
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace UnitedSystemsCooperative.Web.Shared
 {
+    [ExcludeFromCodeCoverage]
     public class WeatherForecast
     {
         public DateTime Date { get; set; }

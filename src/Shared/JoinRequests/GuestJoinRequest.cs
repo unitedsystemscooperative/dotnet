@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using UnitedSystemsCooperative.Web.Shared.Interfaces;
 
 namespace UnitedSystemsCooperative.Web.Shared.JoinRequests;
 
+[ExcludeFromCodeCoverage]
 public class GuestJoinRequest : JoinRequestBase, IJoinRequestReferral
 {
     [Required]

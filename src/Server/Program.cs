@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting.StaticWebAssets;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,3 +38,7 @@ app.MapControllers();
 app.MapFallbackToFile("index.html");
 
 app.Run();
+
+[ExcludeFromCodeCoverage]
+// ReSharper disable once UnusedType.Global
+public partial class Program { }
