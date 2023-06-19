@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
-        <RootNamespace>UnitedSystemsCooperative.Web.Client.Test</RootNamespace>
+        <RootNamespace>UnitedSystemsCooperative.Web.ClientLib.Information.Test</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -32,7 +32,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Client\Client.csproj" />
+      <ProjectReference Include="..\..\src\ClientLib.Information\ClientLib.Information.csproj" />
     </ItemGroup>
 
 
