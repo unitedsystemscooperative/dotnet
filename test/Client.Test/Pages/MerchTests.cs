@@ -8,7 +8,7 @@ namespace UnitedSystemsCooperative.Web.Client.Test.Pages;
 public class MerchTests : TestContext
 {
     [Fact]
-    public void Loads()
+    public void ShouldLoad()
     {
         var mockUrlService = new Mock<IUrlService>();
         mockUrlService

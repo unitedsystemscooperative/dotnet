@@ -22,7 +22,7 @@
                         <NestedList>
                             @foreach (var system in _controlledSystems)
                             {
-                                <MudListItem Href="@system.Name" Text="@system.Name"/>
+                                <MudListItem Href="@system.Name" Text="@system.Name" data-list="controlled"/>
                             }
                         </NestedList>
                     </MudListItem>
@@ -30,7 +30,7 @@
                         <NestedList>
                             @foreach (var system in _presentSystems)
                             {
-                                <MudListItem Href="@system.Name" Text="@system.Name"/>
+                                <MudListItem Href="@system.Name" Text="@system.Name" data-list="controlled"/>
                             }
                         </NestedList>
                     </MudListItem>
@@ -51,7 +51,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _systems = Service.GetFromStore().ToArray();
+        _systems = Service.GetFromStore()?.ToArray();
         try
         {
             if (_systems == null)

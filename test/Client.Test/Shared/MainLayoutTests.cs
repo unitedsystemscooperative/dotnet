@@ -8,7 +8,7 @@ namespace UnitedSystemsCooperative.Web.Client.Test.Shared;
 public class MainLayoutTests : TestContext
 {
     [Fact]
-    public void Loads()
+    public void ShouldLoad()
     {
         var linkOptions = new LinkOptions()
         {

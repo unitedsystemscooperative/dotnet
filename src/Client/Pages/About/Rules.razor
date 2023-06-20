@@ -19,7 +19,7 @@
                             @{ var i = 1; }
                             @foreach (var rule in _discordRules)
                             {
-                                <MudListItem Text="@($"{i}) {rule}")"/>
+                                <MudListItem Text="@($"{i}) {rule}")" data-ruleset="discord"/>
                                 i++;
                             }
                         </MudList>
@@ -31,11 +31,11 @@
                     <MudText Typo="Typo.h5" Align="Align.Center">Members of USC</MudText>
                     @if (_memberRules != null)
                     {
-                        <MudList>
+                        <MudList id="member-rules">
                             @{ var i = 1; }
                             @foreach (var rule in _memberRules)
                             {
-                                <MudListItem Text="@($"{i}) {rule}")"/>
+                                <MudListItem Text="@($"{i}) {rule}")" data-ruleset="member"/>
                                 i++;
                             }
                         </MudList>
@@ -53,8 +53,8 @@
 
     protected override void OnInitialized()
     {
-        var rules = AboutSettings.Value.Rules;
-        _discordRules = rules!.Discord;
+        var rules = AboutSettings.Value.Rules!;
+        _discordRules = rules.Discord;
         _memberRules = rules.Member;
         base.OnInitialized();
     }

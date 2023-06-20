@@ -1,7 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using UnitedSystemsCooperative.Web.Client.Interfaces;
 
 namespace UnitedSystemsCooperative.Web.Client.Modules.About;
 
+[ExcludeFromCodeCoverage]
 public class AboutLayoutButtonInfo : ILink
 {
     public string Title { get; set; } = string.Empty;

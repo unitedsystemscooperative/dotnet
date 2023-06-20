@@ -9,7 +9,7 @@ public static class UscTheme
 {
     public static MudTheme Theme { get; } = new()
     {
-        PaletteDark = new Palette()
+        PaletteDark = new PaletteDark()
         {
             Primary = new MudColor("#f07b05"),
             Secondary = new MudColor("#00b3f7"),
