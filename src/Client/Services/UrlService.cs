@@ -4,7 +4,7 @@ using UnitedSystemsCooperative.Web.Client.Models.Options;
 
 namespace UnitedSystemsCooperative.Web.Client.Services;
 
-public class UrlService
+public class UrlService : IUrlService
 {
     private readonly UscLink[] _uscLinks;
     
@@ -14,12 +14,10 @@ public class UrlService
     }
 
     /// <summary>
-    /// Replaces any bracketed usc keys in a link field
-    ///
-    /// example: `{discord}`
+    /// <inheritdoc />
     /// </summary>
-    /// <param name="linkItems">Items to review and replace</param>
-    /// <typeparam name="T">Must have a Link field to satisfy ILink</typeparam>
+    /// <param name="linkItems"><inheritdoc /></param>
+    /// <typeparam name="T"><inheritdoc /></typeparam>
     /// <returns></returns>
     public IEnumerable<T> ReplaceUscUrls<T>(IEnumerable<T> linkItems) where T : ILink
     {

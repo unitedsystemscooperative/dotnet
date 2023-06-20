@@ -1,6 +1,8 @@
+
+
 using UnitedSystemsCooperative.Web.Client.Pages;
 
-namespace UnitedSystemsCooperative.Web.Client.Test;
+namespace UnitedSystemsCooperative.Web.Client.Test.Pages;
 
 public class IndexTests : TestContext
 {

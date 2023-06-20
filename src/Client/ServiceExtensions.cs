@@ -19,7 +19,7 @@ public static class ServiceExtensions
 
     public static void AddServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddSingleton<UrlService>();
+        services.AddSingleton<IUrlService, UrlService>();
         
         services.AddScoped<IItemService<Ally>, AllyService>();
         services.AddScoped<IItemService<ShipBuild>, BuildService>();

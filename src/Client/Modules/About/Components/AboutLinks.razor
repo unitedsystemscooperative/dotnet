@@ -1,10 +1,11 @@
 @using UnitedSystemsCooperative.Web.Client.Modules.About
 @using UnitedSystemsCooperative.Web.Client.Models
 @using Microsoft.Extensions.Options
+@using UnitedSystemsCooperative.Web.Client.Interfaces
 @using UnitedSystemsCooperative.Web.Client.Models.Options
 @using UnitedSystemsCooperative.Web.Client.Services
 @inject IOptions<AboutOptions> AboutOptions
-@inject UrlService UrlService
+@inject IUrlService UrlService
 
 <MudContainer MaxWidth="MaxWidth.Medium" Class="pa-2 mb-2" Style="text-align: center; width: fit-content; margin: auto">
     <MudPaper>

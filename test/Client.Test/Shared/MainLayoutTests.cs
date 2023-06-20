@@ -3,7 +3,7 @@ using MudBlazor;
 using UnitedSystemsCooperative.Web.Client.Models.Options;
 using UnitedSystemsCooperative.Web.Client.Shared;
 
-namespace UnitedSystemsCooperative.Web.Client.Test;
+namespace UnitedSystemsCooperative.Web.Client.Test.Shared;
 
 public class MainLayoutTests : TestContext
 {
