@@ -5,5 +5,5 @@ namespace UnitedSystemsCooperative.Web.Shared;
 [ExcludeFromCodeCoverage]
 public class DbItem
 {
-    public virtual string Id { get; set; }
+    public virtual required string Id { get; set; }
 }

@@ -7,13 +7,13 @@ namespace UnitedSystemsCooperative.Web.Shared;
 [ExcludeFromCodeCoverage]
 public class FleetCarrier : DbItem
 {
-    [Required] [FleetCarrierValidator] public override string Id { get; set; }
+    [Required] [FleetCarrierValidator] public override required string Id { get; set; }
 
-    [Required] public string Name { get; set; }
+    [Required] public required string Name { get; set; }
 
-    [Required] public string Owner { get; set; }
+    [Required] public required string Owner { get; set; }
 
-    public string OwnerId { get; set; }
+    public string OwnerId { get; set; } = string.Empty;
     public string Purpose { get; set; } = string.Empty;
     public string Link { get; set; } = string.Empty;
 }
